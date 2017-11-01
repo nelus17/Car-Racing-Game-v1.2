@@ -6,12 +6,12 @@
 
 Obstacles::Obstacles()
 {
-	obstacleCoordY = 0;  obstacleCoordX = rand() % 15 + 2; //the obstacles coordiantes
+	obstacleCoordY = 0;  obstacleCoordX = rand() % 15 + 2; 
 }
 
 Obstacles::Obstacles(int scoreCoordY)
 {
-	scoreCoordX = rand() % 15 + 2; //the cash coordinates
+	scoreCoordX = rand() % 15 + 2;
 }
 
 void Obstacles::createObstacles(char map[default_Map_Size][default_Map_Size])
