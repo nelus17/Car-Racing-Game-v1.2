@@ -17,8 +17,7 @@ GameControl::GameControl()
 int GameControl::movement(Car *Player_Car) {
 	if (_kbhit()) {
 		if (_getch() && GetAsyncKeyState(VK_LEFT)) {
-			if (map[Player_Car->y][Player_Car->x - 3] == obs) {
-				std::cout << "\n\n Game Over!!!" << std::endl;
+			if (map[Player_Car->y][Player_Car->x - 3] == obs) {				std::cout << "\n\n Game Over!!!" << std::endl;
 				std::cout << "Press ENTER for Quit" << std::endl;
 				std::cin.get();
 				return 0;
@@ -59,7 +58,7 @@ int GameControl::isCrashed(Car *ptr) {
 	}
 }
 
-/*bool GameControl::isTookCash(Car *ptr) {
+bool GameControl::isTookCash(Car *ptr) {
 	if (map[ptr->y - 2][ptr->x] == cash || map[ptr->y - 2][ptr->x - 1] == cash || map[ptr->y - 2][ptr->x + 1] == cash) {
 		map[ptr->y - 2][ptr->x] = ' ';
 		map[ptr->y - 2][ptr->x - 1] = ' ';
@@ -76,5 +75,6 @@ int GameControl::isCrashed(Car *ptr) {
 		++cashcheck;
 	}
 	Sleep(defaultSpeed);
-}*/
+	return false;
+}
 
