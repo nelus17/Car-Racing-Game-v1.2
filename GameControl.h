@@ -9,7 +9,7 @@ public:
 	GameControl();
 	int movement(Car *ptr);
 	int isCrashed(Car *ptr);
-	//bool isTookCash(Car *ptr);
+	bool isTookCash(Car *ptr);
 };
 
 #endif
